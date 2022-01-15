@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Runas with password or encrypted credentials = RunAsSpc</title>
+		<link rel="amphtml" href="https://robotronic.de/amp/runasspcen.html">
+		<link rel="alternate" href="https://robotronic.de/runasspcen.html" hreflang="x-default"/>
+		<link rel="alternate" href="https://robotronic.de/runasspc.html" hreflang="de"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes" />
+		<meta name="DESCRIPTION" content="Run application as another user to start program as administrator from a limited account like the command runas, but without to enter login information on each start">
+		<meta name="KEYWORDS" content="runas, passwort, password, runasspc">
+		<meta name="ROBOTS" content="INDEX, FOLLOW">
+		<meta name="author" content="Oliver Hessing" />
+
+			<!-- add styles -->
+		 <link href="css/main.css" rel="stylesheet" type="text/css" />
+
+	</head>
+	<body>
+
+	<input type="checkbox" id="responsive-nav">
+	<label for="responsive-nav" class="responsive-nav-label"><img alt="Navigation" src="images/hamburger.png"> Navigation robotronic.de</label>	
+
+	<nav>
+	  <ul>
+		<li><a href="https://robotronic.de/contacten.html" title="Contact">Contact</a></li>
+		<li class="submenu">
+		<a href="#" title="RunAsRob">RunAsRob</a>
+			<ul>
+				<li><a href="runasroben.html" title="RunAsRob overview">RunAsRob overview</a></li>
+				<li><a href="runasadminen.html" title="Run as admin">Run as admin</a></li>
+				<li><a href="runasserviceen.html" title="Run as service">Run as service</a></li>
+				<li><a href="runasdifferentuseren.html" title="Run as another user">Run as another user</a></li>
+				<li><a href="runasrobdetailsen.html" title="Details and differences">Details and differences</a></li>
+			</ul>
+		</li>
+		<li class="submenu">
+		<a href="#" title="RunAsSpc">RunAsSpc</a>
+			<ul>
+				<li><a href="runasspcen.html" title="RunAsSpc overview">RunAsSpc overview</a></li>
+				<li><a href="guidance.html" title="Details and examples">Details and examples</a></li>
+			</ul>
+		</li>
+		<li><a href="elevateen.html" title="RunElevated">RunElevated</a></li>
+		<li><a href="https://robotronic.de/eula.html" title="EULA">EULA</a></li>
+		<li><a href="https://robotronic.de/orderEnForm.php" title="Order">Order</a></li>  	
+	  </ul>
+	</nav>
+
+	<div class="pagecontent">
+	<p>
+	<a href="runasspcEn.html"><img alt="Runas with password English" src="images/flagge_grossbritannien.gif"></a>
+	<a href="runasspc.html"><img alt="Runas with password german" src="images/flagge_deutschland.gif"></a> 	
+	RunAsSpc overview
+	</p>
+	<div itemscope itemtype="http://schema.org/CreativeWork">
+
+	<H1 itemprop="name">
+	Runas with password or encrypted credentials = RunAsSpc
+	</H1>
+
+	<H2 itemprop="description">
+	Run application as different user to start program as administrator from a limited account like the command runas, but without to enter login information on each start.
+	</H2>
+	
+	<div itemprop="disambiguatingDescription">
+	<p>
+	Run application under another account without entering the password is possible with the runas password utility RunAsSpc.<br>
+	The application and account information can pass directly <br>
+	or can be read out from an encrypted file, created on command line via runasspc.exe<br>
+	or the graphical interface RunAsSpcAdmin.
+	</p>
+	</div>
+	
+	<p>
+	RunAsSpc needs no installation and is portable with all options
+	</p>
+
+	 <ul>
+		<li>
+		Software packages, drivers, updates, security patches can run as administrator and installed by a limited user <br>
+		via an encrypted file from which the application run with administrator privileges. 
+		</li>
+		<li>
+		Users often work under administrator account, because a program need administrator rights to run.<br>
+		By using RunAsSpc, a limited user need no longer login as administrator to run these application.
+		</li>
+		<li>
+		Run internet browser as administrator makes the system vulnerable to viruses, hacker attacks and other security risks. <br>
+		Surfing with a limited account decreases the risk.<br>
+		Use RunAsSpc and start the internet browser with a limited user account.
+		</li>
+		<li>
+		Instruct a non admin user to confgure a client computer or do a specific administrator job<br> 
+		without give him the admin account login information.<br>
+		Send him an encrypted file with that job.
+		</li>
+		<li>
+		Via RunAsSpc you can run a specific application as different user, <br>
+		if you need the login to an application with two different accounts on the same desktop, <br>
+		because you have to do some jobs with another account.<br>
+		Maybe you represent your college for a while or you need other rights for a while inside the application for some tasks.
+		</li>
+	</ul>
+	 
+	 <p>
+	 <a href="https://robotronic.de/RunasSpcQuickGuideExample.html">Video example quick guide &gt;&gt;&gt;</a><br>
+	 <a href="guidance.html">Detailed guidance and a lot of other examples &gt;&gt;&gt;</a><br>
+	 </p>
+	 
+	 <img  itemprop="image" alt="RunAsSpcAdmin configuration Window" src="images/screenshots/ScreenshotRunAsSpcAdmin.jpg"> 
+	 
+	<hr>
+	 
+	 <H3>FAQ</H3>
+
+	 <ul>
+	 <li>
+	 Run as administrator is not working. <br>
+	Your application, script, or batch file probably don't request
+	elevated privileges on an UAC activated system. <br>
+	If an application request elevated privileges, then RunAsSpc start it with elevated privileges.<br>
+	A non-elevated application, can run with administrator
+	rights by using my tool <a href="https://robotronic.de/elevateen.html">RunElevated</a>
+	combined with RunAsSpc,
+	or simply using our advanced tool <a href="https://robotronic.de/runasroben.html">RunasRob</a>.
+	 </li>
+	 <li>
+	 Bypass the UAC Dialog is possible with <a href="https://robotronic.de/runasroben.html">RunasRob</a>.
+	 </li>
+	 <li>
+	 RunAsSpc couldn&rsquo;t find the application<br>
+	- Set the complete path of the application in the encrypted file.<br>
+	- The application must be reached for the user who calls the application over RunAsSpc, because RunAsSpc read the checksum of the
+	application before the application will be call under another user context.
+	</li>
+	 <li>
+	RunAsSpc is compatible with the most file endings like *.exe,*.msi,*.bat,*.cmd,*.wsh,*.vbs, *.msc...
+	</li>
+	 <li>
+	 Unknown publisher message or Open File security warning dissapear <br>
+	after you accept RunAsSpc as known application by uncheck the box:
+	&gt;&gt; Always ask before opening this file &lt;&lt;
+	</li>
+	 <li>
+	 Error messages can be suppressed by switch /quiet for example:<br>
+	&gt;&gt; runasspc.exe /cryptfile:&ldquo;path/cryptfile.spc&ldquo; /quiet &lt;&lt;
+	</li>
+	 <li>
+	 UNC Path are supported. Mapped drives not. <br>
+	The encrypted file can be store on a mapped drive but not the application.
+	</li>
+	 <li>
+	 RunAsSpc, cryptfile and the application can be store on different folders.
+	</li>
+	 <li>
+	 Errors Codes returned by RunAsSpc:<br>
+	Most errors codes are explained on MSDN:
+	https://msdn.microsoft.com/en-us/library/ms681381.aspx
+	</li>
+	 <li>
+	 RunAsSpc is Running on Windows Vista, Windows 7, Windows 8, Windows 10, Server 2008, Server 2012, Server 2016, Server 2019, 64 und 32 Bit versions</li>
+	 <li>
+	 Restriction in version for private use is the startup window with license information, which appears at random intervals.
+	 </li>
+	 <li>
+	 Authorize only a specific user or group to run a an application. <br>
+	This can be achieved by setting NTFS permissions to the encrypted file, the program file or program folder.<br>
+	 </li>
+
+	<li>
+	Processes start from the allowed running application inherits the permissions. <br>
+	This makes sense, but not in all cases. For example, if this application has a file open dialog to run other programs, a selected program launched from this dialog, run with same privileges. <br>
+	</li>
+
+	<li>
+	Credentials are reversible encrypted that application can start with the account from the encrypted file. 
+	</li>
+	<li>
+	To avoid that authorized application file can be renamed, set the option >> checksum. Application will be checked on bit level. <<
+	</li>	
+	
+	</ul>
+	
+	<hr>
+	 
+	<H3>Contact:</H3>
+
+	<p>
+	For any suggestions, errors, questions, specific requirements or
+	adjustments please contact:<br>
+	 <a href="mailto:runas@robotronic.de">runas@robotronic.de</a>
+	</p>
+
+	<hr>
+	 
+	<H3> Licence:</H3>
+	 
+	<p>
+	RunAsSpc is only free for private use.<br>
+	For companies and other organisations we deliver a licensed version, registered to the organisation name.<br>
+	 <a href="https://robotronic.de/orderEnForm.php">Order RunAsSpc &gt;&gt;&gt;</a><br>
+	 <a href="https://robotronic.de/runasspc/runasspcEn.zip">Download RunAsSpc &gt;&gt;&gt;</a><br>
+	</p> 
+	
+	<hr>
+	<p>
+	<i>	 
+	<meta itemprop="datePublished" content="2019-10-13">Date: 2019-10-13
+	<br>
+	<a href="https://runasrob.com/privacystatementen.html" title="Data protection">Data protection</a><br>
+	<a href="https://runasrob.com/imprinten.html" title="Imprint">Imprint</a>
+	</i>
+	</p>
+	
+	</div>	
+	</div>
+	</body>
+</html>

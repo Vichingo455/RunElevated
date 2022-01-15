@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+		<meta charset="utf-8">
+		<title>Starte Programm als Admin, mit dem Systemkonto, als Dienst oder anderer Benutzer</title>
+		<link rel="amphtml" href="https://robotronic.de/amp/runasrobde.html">
+		<link rel="alternate" href="https://robotronic.de/runasroben.html" hreflang="x-default"/>
+		<link rel="alternate" href="https://robotronic.de/runasrobde.html" hreflang="de"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes" />
+		<meta name="DESCRIPTION" content="RunAsRob ist nicht nur ein Runas mit Passwort Befehl, es bietet vier komplett unterschiedliche Anmeldeoptionen, mit welchen man Software als Administrator mit Systemrechte starten kann">
+		<meta  name="KEYWORDS"  content="RunAsRob">
+		<meta  name="ROBOTS"  content="INDEX, FOLLOW">
+        <meta name="author" content="Oliver Hessing" />
+
+        <!-- add styles -->
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+    </head>
+	<body>
+
+	<input type="checkbox" id="responsive-nav">
+	<label for="responsive-nav" class="responsive-nav-label"><img alt="Navigation" src="images/hamburger.png"> Navigation robotronic.de</label>	
+
+	<nav>
+	  <ul>
+		<li><a href="https://robotronic.de/contactde.html" title="Kontakt">Kontakt</a></li>
+		<li class="submenu">
+		<a href="#" title="RunAsRob">RunAsRob</a>
+			<ul>
+				<li><a href="runasrobde.html" title="RunAsRob overview">RunAsRob Übersicht</a></li>
+				<li><a href="runasadminde.html" title="Run as admin">Run as admin</a></li>
+				<li><a href="runasservicede.html" title="Run as service">Run as service</a></li>
+				<li><a href="runasdifferentuserde.html" title="Run as another user">Run as another user</a></li>
+				<li><a href="runasrobdetailsde.html" title="Details and Unterschiede">Details and Unterschiede</a></li>
+			</ul>
+		</li>
+		<li class="submenu">
+		<a href="#" title="RunAsSpc">RunAsSpc</a>
+			<ul>
+				<li><a href="runasspc.html" title="RunAsSpc overview">RunAsSpc Übersicht</a></li>
+				<li><a href="anleitung.html" title="Details und Beispiele">Details und Beispiele</a></li>
+			</ul>
+		</li>
+		<li><a href="elevatede.html" title="RunElevated">RunElevated</a></li>
+		<li><a href="https://robotronic.de/agb.html" title="AGB">AGB</a></li>
+		<li><a href="https://robotronic.de/orderDeForm.php" title="Bestellung">Bestellung</a></li>
+	  </ul>
+	</nav>
+
+	<div class="pagecontent">
+	<p>
+	<a href="runasroben.html"><img alt="RunAsRob overview English" src="images/flagge_grossbritannien.gif"></a>
+	<a href="runasrobde.html"><img alt="RunAsRob overview german" src="images/flagge_deutschland.gif"></a>	
+	RunAsRob Übersicht
+	</p>
+	<div itemscope itemtype="http://schema.org/CreativeWork">
+	
+	<H1 itemprop="name">
+	Starte Programm als Admin, mit dem Systemkonto, als Dienst oder anderer Benutzer
+	</H1>
+
+	<H2 itemprop="description">
+	RunAsRob ist nicht nur ein Runas mit Passwort Befehl, sondern bietet vier komplett unterschiedliche Anmeldeoptionen, mit welcher man Software als Administrator mit Systemrechte starten kann.
+	</H2>
+	
+	<div itemprop="disambiguatingDescription">
+	
+	<p>
+	Ein Standardbenutzer kann temporär in die Gruppe der lokalen Administratoren geschoben werden, nur für das autorisierte Programm <br>
+	oder RunAsRob startet die erlaubte Anwendung mit dem Systemkonto, dieses Konto hat sogar mehr lokale Rechte als ein Administrator.<br>
+	Eine weitere variante kann Anwendungen als Dienst starten, um das Programm nach dem Booten auszuführen, bevor sich ein Benutzer am System anmeldet.<br>
+	Die vierte Option startet Software unter anderem Benutzer wie bei dem Befehl runas, allerdings mit der Möglichkeit das Passwort verschlüsselt zu übergeben.
+	</p>
+	
+	<p>
+	Ein anderer Vorteil von RunAsRob ist, die Möglichkeit einen ganzen Ordner zu autorisieren, von woraus sie ein Programm mit Administratorrechte starten können.
+	</p>
+	
+	</div>	
+	<p>Anwendungsmöglichkeiten</p>
+	 <ul>
+	 <li>Autorisieren Sie Programmdateien oder Ordner in RunAsRob, die von einem eingeschränkten Benutzer genutzt werden können um Software als Administrator starten zu lassen.
+	 </li>
+	 <li>Sie können Software, Updates, Patches, Treiber,... sehr einfach verteilen, indem sie die Installationsdateien auf eine Netzwerkfreigabe kopieren, die in RunAsRob autorisiert wurde.
+	 </li>
+	 <li>Geben sie nur einem bestimmten Programm Administratorrechte, statt einem ganzem Benutzerkonto.
+	 </li>
+	 <li>Delegieren sie administrative Arbeiten an Benutzer, indem sie entsprechende Aufgabe erlauben als Administrator zu starten.
+	 </li>
+	 <li>Verwalten sie die erlaubten Anwendungen zentral in einer Domain über Gruppenrichtlinien, Organisationseinheiten und Verzeichnisrechte. RunAsRob harmoniert damit sehr gut.
+	 </li>
+	 <li>Umgehen der UAC Abfrage für ein Script oder ein Programm. 
+	 </li>
+	 <li>Eine Anwendungen oder ein Script kann unter dem System Konto starten, welches mehr Systemrechte hat als ein Administrator Konto.
+	 </li>	 
+	 <li>Starte ein Programm als Admin mit dem eigenem Profil und eigenen Einstellungen des Benutzers.<br>
+	 In anderen Runas Tools ist es nur möglich Programme unter einem anderen Konto als Administrator zu starten.
+	 </li> 
+	 <li>Wildcard Asterisk * und Umgebungsvariablen wie %windir% können für das autorisieren von relativen Ordner - und Programmpfaden verwendet werden.
+	 </li>
+	 <li>Sie benötigen keine Anmeldedaten von einem Administrator Konto in einer verschlüsselten Datei oder sonst irgendwo. <br>
+	 Die Autorisierung und Anmeldeinformationen können über Registry, Verzeichnisrechte und einem Service kontrolliert werden.
+	 </li>
+	 <li>Starte ein Programm als Dienst mit Systemrechte bereits nach dem Booten des Rechners, ob ein Benutzer angemeldet ist oder nicht.
+	 </li>
+	 <li>RunAsRob ist effectiv und einfach zu verwenden bei lokalen Rechnern, in kleinen Netzwerken oder in einer großen Domainumgebung, weil das Design klar und übersichtlich ist.
+	 </li>
+	 </ul>
+
+	 
+	<H3>RunAsRob besteht aus drei Teile:</H3>
+	<p>
+	 <a href="runasadminde.html">Run as admin und run as system &gt;&gt;&gt;</a> <br>
+	 <a href="runasservicede.html">Run as service &gt;&gt;&gt;</a> <br>
+	 <a href="runasdifferentuserde.html">Run as different user&gt;&gt;&gt;</a><br>
+	</p>
+
+	<hr>
+
+	<H3>RunAsRob Details, Unterschiede, FAQs:</H3>
+	<p>
+	<a href="runasrobdetailsde.html">RunAsRob Details &gt;&gt;&gt;</a><br>
+	</p>
+
+	<hr>
+
+	<H3>Kontakt:</H3>
+	 <p>
+	Für Verbesserungsvorschläge, Fragen, spezielle Anforderungen oder Anpassungen schreiben sie uns.<br>
+	 <a href="mailto:runas@robotronic.de">runas@robotronic.de</a><br>
+	</p>
+	 
+	<hr>
+	 
+	<H3>Lizenz:</H3>
+	 <p>
+	RunasRob ist nur für die private Verwendung frei.<br>
+	Für Unternehmen und andere Organisationen gibt es auf den Organisationsnamen lizenzierte Versionen.<br>
+	 <a href="https://robotronic.de/orderDeForm.php">Bestellung RunasRob &gt;&gt;&gt;</a><br>
+	 <a href="https://robotronic.de/runasrob/runasrobde.zip">Download RunasRob &gt;&gt;&gt;</a><br>
+	</p>
+	
+	<hr>
+	<p>
+	<i>	 
+	<meta itemprop="datePublished" content="2019-10-13">Date: 2019-10-13
+	<br>
+	<a href="https://runasrob.com/privacystatementde.html" title="Datenschutz">Datenschutz</a><br>
+	<a href="https://runasrob.com/imprinten.html" title="Impressum">Impressum </a>
+	</i>
+	</p>
+	
+	</div>	
+	</div>
+	</body>
+</html>

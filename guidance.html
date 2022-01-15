@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Pass a password to Runas with RunAsSpc or use encrypted credentials</title>
+		<link rel="amphtml" href="https://robotronic.de/amp/guidance.html">
+		<link rel="alternate" href="https://robotronic.de/guidance.html" hreflang="x-default"/>
+		<link rel="alternate" href="https://robotronic.de/anleitung.html" hreflang="de"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes" />
+		<meta name="DESCRIPTION" content="RunAsSpc guidance and examples. You can call RunAsSpc like in the following command"> 
+		<meta name="KEYWORDS" content="runas passwort password runasspc">
+		<meta name="ROBOTS" content="INDEX, FOLLOW">
+		<meta name="author" content="Oliver Hessing" />
+
+	 <!-- add styles -->
+	 <link href="css/main.css" rel="stylesheet" type="text/css" />
+
+	</head>
+	<body>
+
+	<input type="checkbox" id="responsive-nav">
+	<label for="responsive-nav" class="responsive-nav-label"><img alt="Navigation" src="images/hamburger.png"> Navigation robotronic.de</label>	
+
+	<nav>
+	  <ul>
+		<li><a href="https://robotronic.de/contacten.html" title="Contact">Contact</a></li>
+		<li class="submenu">
+		<a href="#" title="RunAsRob">RunAsRob</a>
+			<ul>
+				<li><a href="runasroben.html" title="RunAsRob overview">RunAsRob overview</a></li>
+				<li><a href="runasadminen.html" title="Run as admin">Run as admin</a></li>
+				<li><a href="runasserviceen.html" title="Run as service">Run as service</a></li>
+				<li><a href="runasdifferentuseren.html" title="Run as another user">Run as another user</a></li>
+				<li><a href="runasrobdetailsen.html" title="Details and differences">Details and differences</a></li>
+			</ul>
+		</li>
+		<li class="submenu">
+		<a href="#" title="RunAsSpc">RunAsSpc</a>
+			<ul>
+				<li><a href="runasspcen.html" title="RunAsSpc overview">RunAsSpc overview</a></li>
+				<li><a href="guidance.html" title="Details and examples">Details and examples</a></li>
+			</ul>
+		</li>
+		<li><a href="elevateen.html" title="RunElevated">RunElevated</a></li>
+		<li><a href="https://robotronic.de/eula.html" title="EULA">EULA</a></li>
+		<li><a href="https://robotronic.de/orderEnForm.php" title="Order">Order</a></li>  	
+	  </ul>
+	</nav>
+
+	<div class="pagecontent">
+	<p>
+	<a href="guidance.html"><img alt="RunasSpc guidance Englisch" src="images/flagge_grossbritannien.gif"></a>
+	<a href="anleitung.html"><img alt="RunasSpc Anleitung German" src="images/flagge_deutschland.gif"></a> 	
+	RunAsSpc Details and examples
+	</p>
+	<div itemscope itemtype="http://schema.org/CreativeWork">
+
+	<H1 itemprop="name">
+	Pass a password to Runas with RunAsSpc or use encrypted credentials
+	</H1>
+
+	<H2 itemprop="description">
+	You can call RunAsSpc simple and direct like in the following example.
+	</H2>
+
+	<div itemprop="disambiguatingDescription">
+	<p>
+	RunAsSpc.exe /program:"c:\windows\system32\regedt32.exe" /user:"admin" /password:"pass"<br>
+	<img  itemprop="image" src="images/screenshots/Guidancescreenshot5.gif" alt="RunAsSpc command line call"><br>
+	There is no security check and the password is in plaintext.
+	</p>
+
+	<p>
+	If you want to hide the logon credentials you can configure an encrypted file <br>
+	with RunAsSpc.exe on command line or the graphical user interface RunAsSpcAdmin.exe. <br>
+	Take a look below on &gt;&gt; Build encrypted files &lt;&lt;.
+	</p>
+	
+	<p>
+    You can call this encrypted file with RunAsSpc.exe as follows:<br>
+	A) If the name of the encryped file is &gt;&gt; crypt.spc &lt;&lt; , you can start it by a double-click on RunAsSpc.exe.in the same directory.<br>
+	B) Drag your encrypted file and drop it onto RunAsSpc.exe<br>
+	C) On command line &gt;&gt;RunAsSpc.exe /cryptfile:"path\NameOfCryptfile" &lt;&lt;<br>
+	D) Create a shortcut or link like &gt;&gt; c:\path\runasspc.exe /cryptfile:"path\NameOfCryptfile" &lt;&lt;<br>
+	E)&nbsp; Link the file extension (open with) *.spc on your system to RunAsSpc.exe, to run the encrypted file by double-click. <br>
+	You can also use your own file extension.
+	</p>
+	</div>
+	
+	<hr>
+	 
+	<H3>Build encrypted files:</H3>
+
+	<p>
+	A)<br>
+	With command RunAsSpc.exe<br>
+	&gt;&gt; runasspc.exe /cryptfile:"crypt.spc" /program:"prog.exe" /domain:"localhost" /user:"admin" /password:"pass" &lt;&lt;<br>
+	You find examples in the file readme.txt or call &gt;&gt; runasspc.exe -h &lt;&lt; on command line to get help<br>
+	</p>
+
+	<p>
+	B) <br>
+	With graphical user interface RunAsSpcAdmin.exe. <br>
+	See screenshots below with a lot of example configurations or
+	take a look to the <a href="https://robotronic.de/RunasSpcQuickGuideExample.html">video
+	example</a>.<br>
+	<p>
+	Start registry editor under the local user account localadmin.<br>
+	 <img alt="screenshot" src="images/screenshots/screenshot0.gif"><br>
+	</p>
+	<p>
+	Open the Excel document molecularWheigtCalculation.xls under domainaccount departmentuser.<br>
+	 <img alt="screenshot" src="images/screenshots/screenshot1.gif"> <br>
+	</p>
+	<p>
+	Install msi file acdSee 4.0.msi over the domain account installaccount.<br>
+	 <img alt="screenshot" src="images/screenshots/screenshot2.gif"> <br>
+	</p>
+	<p>
+	Call a msc file like the computerconsole<br>
+	 <img alt="screenshot" src="images/screenshots/screenshot3.gif"> <br>
+	</p>
+	<p>
+	To run a vbs script<br>
+	 <img alt="screenshot" src="images/screenshots/screenshot4.gif"> <br>
+	</p>
+	<p>
+	Insert a registry entry<br>
+	 <img alt="screenshot" src="images/screenshots/screenshot5.gif"> <br>
+	</p>
+	<p>
+	To start a batchfile like *.bat or *.cmd<br>
+	 <img alt="screenshot" src="images/screenshots/screenshot6.gif"> <br>
+	</p>
+	<p>
+	To install Java with parameters /S /V /qn<br>
+	 <img alt="screenshot" src="images/screenshots/screenshot7.gif"> <br>
+	</p>
+	<p>
+	To run a Batchfile with some options like optionA optionB optionC<br>
+	 <img alt="screenshot" src="images/screenshots/screenshot8.gif"> <br>
+	</p>
+	<p>
+	To use environment variables<br>
+	 <img alt="screenshot" src="images/screenshots/screenshot9.gif"><br>
+	</p>
+	<p>
+	Call with rundll32 the &gt;&gt;&gt;Add / Remove programs applet&lt;&lt;&lt;<br>
+	 <img style="width: 444px; height: 544px;" alt="screenshot 10" src="images/screenshots/screenshot10.gif"><br>
+	</p>
+
+	<hr>
+	 
+	<H3>Contact:</H3>
+
+	<p>
+	For any suggestions, errors, questions, specific requirements or adjustments please contact:<br>
+	 <a href="mailto:runas@robotronic.de">runas@robotronic.de</a><br>
+	</p>
+
+	<hr>
+	 
+	<H3>Licence:</H3>
+
+	<p>
+	RunAsSpc is only free for private use.<br>
+	For companies and other organisations we deliver a licensed version, registered to the organisation name.<br>
+	 <a href="https://robotronic.de/orderEnForm.php">Order RunasSpc &gt;&gt;&gt;</a><br>
+	 <a href="https://robotronic.de/runasspc/runasspcen.zip">Download RunasSpc &gt;&gt;&gt;</a><br>
+	</p>
+
+	<hr>
+	<p>
+	<i>	 
+	<meta itemprop="datePublished" content="2019-10-13">Date: 2019-10-13
+	<br>
+	<a href="https://runasrob.com/privacystatementen.html" title="Data protection">Data protection</a><br>
+	<a href="https://runasrob.com/imprinten.html" title="Imprint">Imprint</a>
+	</i>
+	</p>
+	
+
+	</div>	
+	</div>
+	</body>
+</html>

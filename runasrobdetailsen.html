@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html  lang="en">
+	<head>
+  		<meta charset="utf-8">
+		<title>RunAsRob details and examples</title>
+		<link rel="amphtml" href="https://robotronic.de/amp/runasrobdetailsen.html">
+		<link rel="alternate" href="https://robotronic.de/runasrobdetailsen.html" hreflang="x-default"/>
+		<link rel="alternate" href="https://robotronic.de/runasrobdetailsde.html" hreflang="de"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes" />
+		<meta name="DESCRIPTION" content="Differences, Details and FAQs between Runas tools RunAsRob, RunAsAdmin, RunAsService and RunAsSpc">
+		<meta  name="KEYWORDS"  content="RunAsRob">
+		<meta  name="ROBOTS"  content="INDEX, FOLLOW">
+		<meta name="author" content="Oliver Hessing" />
+
+
+		<!-- add styles -->
+		<link href="css/main.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+
+	<input type="checkbox" id="responsive-nav">
+	<label for="responsive-nav" class="responsive-nav-label"><img alt="Navigation" src="images/hamburger.png"> Navigation robotronic.de</label>	
+
+	<nav>
+	  <ul>
+		<li><a href="https://robotronic.de/contacten.html" title="Contact">Contact</a></li>
+		<li class="submenu">
+		<a href="#" title="RunAsRob">RunAsRob</a>
+			<ul>
+				<li><a href="runasroben.html" title="RunAsRob overview">RunAsRob overview</a></li>
+				<li><a href="runasadminen.html" title="Run as admin">Run as admin</a></li>
+				<li><a href="runasserviceen.html" title="Run as service">Run as service</a></li>
+				<li><a href="runasdifferentuseren.html" title="Run as another user">Run as another user</a></li>
+				<li><a href="runasrobdetailsen.html" title="Details and differences">Details and differences</a></li>
+			</ul>
+		</li>
+		<li class="submenu">
+		<a href="#" title="RunAsSpc">RunAsSpc</a>
+			<ul>
+				<li><a href="runasspcen.html" title="RunAsSpc overview">RunAsSpc overview</a></li>
+				<li><a href="guidance.html" title="Details and examples">Details and examples</a></li>
+			</ul>
+		</li>
+		<li><a href="elevateen.html" title="RunElevated">RunElevated</a></li>
+		<li><a href="https://robotronic.de/eula.html" title="EULA">EULA</a></li>
+		<li><a href="https://robotronic.de/orderEnForm.php" title="Order">Order</a></li>  	
+	  </ul>
+	</nav>
+
+	<div class="pagecontent">
+	<p>
+	<a href="runasrobdetailsen.html"><img alt="RunAsRob details English" src="images/flagge_grossbritannien.gif"></a>
+	<a href="runasrobdetailsde.html"><img alt="Runas Rob details German" src="images/flagge_deutschland.gif"></a>
+	Details and differences	
+	</p>
+	<div itemscope itemtype="http://schema.org/CreativeWork">	
+	<H1 itemprop="name">
+	RunAsRob command line arguments, registry values, Group Policy options and the differences to RunAsSpc 
+	</H1>
+
+	<H2 itemprop="description">
+	Comparison table RunAsRob, RunAsAdmin, RunAsService and RunAsSpc:
+	</H2>
+		
+		<table  style="text-align: left; width: 100%;"  border="1"  cellpadding="10" cellspacing="0">
+			<tbody>
+			 <tr>
+					<td  style="width: 10%;"></td>
+					  <td  style="width: 30%;"><span  style="font-weight: bold;">RunAsRob</span></td>
+					  <td  style="width: 20%;"><span  style="font-weight: bold;">RunAsAdmin<br>
+						 a part of RunAsRob</span></td>
+					  <td  style="width: 20%;"><span  style="font-weight: bold;">RunAsService<br>
+						 a part of RunasRob</span></td>
+					  <td  style="width: 20%;"><span  style="font-weight: bold;">RunAsSpc<br>
+						 the classic tool</span></td>
+					</tr>
+					<tr>
+					  <td>Genererally </td>
+					  <td  style="font-style: italic; background-color: rgb(200, 255, 200);">Contains RunAsAdmin, RunAsService and <br>
+						can control allowed applications by an encrypted file, which can send anyone to use it.<br>
+					  </td>
+					  <td  style="font-style: italic; background-color: rgb(200, 255, 200);">Allowed application controlled by registry settings.<br>
+						Need no encrypted file.<br>
+						Several applications can be configure at one go.<br>
+						Support of wildcard *<br>
+						Compatible with group policy.<br>
+					  </td>
+					  <td  style="font-style: italic; background-color: rgb(200, 255, 200);">The application is running as service automatic after you turn on the computer and before any user is logged in.<br>
+						Interaction between user and program isn't possible.</td>
+					  <td  style="font-style: italic; background-color: rgb(200, 255, 200);">Allowed applications and credentials controlled by an encrypted file or clear text.<br>
+					  </td>
+					</tr>
+					<tr>
+					  <td><span  style="font-weight: bold;">Logon as</span></td>
+					  <td>.</td>
+					  <td>.</td>
+					  <td>.</td>
+					  <td>.</td>
+					</tr>
+					<tr>
+					  <td>another user</td>
+					  <td  style="font-style: italic; background-color: rgb(200, 255, 200);">Run application under user account from encrypted file. This can be an administrator or any other user account.<br>
+						Requires no installation procedure.<br>
+					  </td>
+					  <td  style="font-style: italic; background-color: rgb(255, 200, 200);">Not possible
+						</td>
+					  <td  style="font-style: italic; background-color: rgb(255, 200, 200);">Not possible
+						</td>
+					  <td  style="background-color: rgb(200, 255, 200); font-style: italic;">Possible<br>
+					  </td>
+					</tr>
+					<tr>
+					  <td>system</td>
+					  <td  style="font-style: italic; background-color: rgb(200, 255, 200);">Run application under system account with highest privileges and without the popup of an UAC dialog.<br>
+						Suitable for installations, updates and patches.<br>
+						Disadvantage: A service is not a complete account. Its  missing a user profile and an own HKU registry path.<br>
+					  </td>
+					  <td  style="font-style: italic; background-color: rgb(200, 255, 200);">Possible</td>
+					  <td  style="font-style: italic; background-color: rgb(200, 255, 200);">The only possible login option. Not editable</td>
+					  <td  style="background-color: rgb(255, 200, 200); font-style: italic;">Not possible</td>
+					</tr>
+					<tr>
+					  <td>administrator</td>
+					  <td  style="font-style: italic; background-color: rgb(200, 255, 200);">Launch application with administrator permissions under the own fully account of the limited user with his own profile and enviroment.<br>
+						Suitable for running programs who need user properties like office.</td>
+					  <td  style="font-style: italic; background-color: rgb(200, 255, 200);">Possible</td>
+					  <td  style="background-color: rgb(255, 200, 200); font-style: italic;">Not possible</td>
+					  <td  style="background-color: rgb(255, 200, 200); font-style: italic;">Not possible</td>
+					</tr>
+					<tr>
+					  <td>netonly</td>
+					  <td  style="background-color: rgb(200, 255, 200); font-style: italic;">Application use  logon credentials from encrypted file for remote connections.</td>
+					  <td  style="font-style: italic; background-color: rgb(255, 200, 200);">Not possible</td>
+					  <td  style="font-style: italic; background-color: rgb(255, 200, 200);">Not possible</td>
+					  <td  style="background-color: rgb(200, 255, 200); font-style: italic;">Possible</td>
+					</tr>
+				  </tbody>
+				</table>
+				<br>
+				<hr>
+				
+				<H3><a  name="detailguidance1"></a>Command line arguments of RunasRob:</H3>
+				
+				<ul>
+				 <li>Installation commands <br>
+					&gt;&gt; runasrob.exe /install &lt;&lt;<br>
+					&gt;&gt; runasrob.exe /uninstall &lt;&lt;<br>
+				 </li>
+				 <li>To create an encrypted file. <br>
+					Open the configuration window of RunAsRob for encrypted files by double click to runasrob.exe or call it with option /configure<br>
+					&gt;&gt; runasrob.exe /configure &lt;&lt;
+				 </li>
+				 <li>To run a encrypted file over runasrob.exe use the option /cryptfile<br>
+					&gt;&gt; runasrob.exe /cryptfile: “c:\path\yourcryptfile.xus”&lt;&lt;<br>
+					or drag and drop the encrypted file over runasrob.exe.
+				</li>
+				<li>For a call without status messages use the switch /quiet<br>
+					&gt;&gt; runasrob.exe /install /quiet &lt;&lt;<br>
+					&gt;&gt; runasrob.exe /cryptfile: “c:\path\yourcryptfile.xus”
+					/quiet &lt;&lt;
+				</li>
+				<li>To set folders, its applications can be launch with
+					administrator rights or allow only a specific application. <br>
+					Install runasrob with option /allowedpath, followed by the
+					allowed folders or applications. Semicolon separated to allow
+					more than one folder or application.<br>
+					&gt;&gt; runasrob.exe /install /allowedpath:c:\program
+					files\folder1\;\\server\share\folder2\;c:\windows\system32\regedt32.exe
+					&lt;&lt;
+				</li>
+				<li>To run applications from this allowed folder<br>
+					drag and drop the application.exe over runasrob.exe <br>
+					or&nbsp;use the following call &gt;&gt; runasrob.exe
+					c:\allowedFolder\applicaton.exe &lt;&lt;<br>
+					This can be done by command line, batch file, shortcut or any
+					other way.
+				</li>
+				<li>An advanced optional switch are /assystem or /asadmin.<br>
+					/assystem -&gt; The allowed application is running under
+					service account with elevated admin rights.<br>
+					/asadmin -&gt; After the user enter his credentials he
+					will be member of the local administrator group for this
+					application which is running under his own account.<br>
+					&gt;&gt; runasrob.exe /install /allowedpath:"\\server\share1\setup.exe;\\server\share2\;C:\windows\system32\regedt32.exe /asadmin;C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe /assystem"
+					&lt;&lt;
+				</li>
+				<li>To configure an application or script to start it permanently
+					as service use the option /servicemode: followed by the
+					application<br>
+					&gt;&gt; runasrob.exe /install
+					/servicemode:c:\test\yourScript.cmd &lt;&lt;
+				</li>
+				 <li>You can combine the arguments of RunasRob like the following
+					example<br>
+					&gt;&gt; runasrob.exe /install /quiet /servicemode:"c:\system\monitoring.exe" /allowedpath:"\\server\share\folder2\;c:\windows\system32\regedt32.exe /asadmin" &lt;&lt;
+				</li>
+				<li>Create encrypted files by command line are possible with
+					RunAsSpc.exe. This files are also readable with RunAsRob.exe<br>
+					runasspc.exe /cryptfile:"crypt.spc"
+					/program:"C:\WINDOWS\system32\calc.exe" /domain:"localhost"
+					/user:"administrator" /password:"password"
+				</li>
+				</ul>
+				
+	<hr>
+			
+	<H3><a  name="detailguidance2"></a> Registry values and Group Policy options:</H3> 
+
+	<p>       
+	Edit the Registry Key of RunAsRob:<br>
+	HKEY_LOCAL_MACHINE\SOFTWARE\RunasRob
+	</p>
+
+	<p>
+	Here you configure the values AllowedPath, ServiceMode, LogonFlag
+	directly or over central group policy in a domain.<br>
+	Changes will take effect after restart of service RunasRob<br>
+	Warning, serious problems might occur if you change the registry
+	incorrectly.<br>
+	<img  style="width: 1046px; height: 269px;"  alt="Registry RunasRob" title="Registry RunasRob"  src="images/screenshots/RegistryRunasRob.jpg"><br>
+	</p>	
+	
+	<p>	By Group Policy in a domain you can manage this settings central.<br>	
+	<a href="runasadminen.html#Bygrouppolicy">
+	runasadminen.html#Bygrouppolicy > > >
+	</a>
+	</p>
+	
+	<hr> 
+
+	<H3> <a name="FAQ"></a>FAQ:</H3> 
+
+		<ol>
+		<li>
+		Running on Windows 10 Professional and Home, Windows Server 2019.
+		</li>
+		<li>
+		64 Bit and 32 Bit Version included.
+		</li>
+		<li>
+		The restriction of the free version for private use is the
+		start-up window with the license information, <br>
+		which appears at random intervals, even if you set the switch /quiet.
+		</li>
+		<li>
+		Environment variables can use like &gt;&gt; %windir%\system32\regedt32.exe\CompMgmtLauncher.exe &lt;&lt;
+		</li>
+		<li>
+		Wildcards can set as authorized path. Example: &gt;&gt; *\updates\flashplayerversion*.exe &lt;&lt;.
+		</li>
+		<li>
+		Authorize only a specific user or group to run a an application. <br>
+		This can be achieved over folder permissions to the program file, encrypted file or the folder.
+		</li>
+		<li>
+		Program arguments are working. If passing arguments are not working, because quotation marks or complex arguments are not accepted in RunasRob.<br>
+		Workaround of this problem is a one line batch file with your complete applicaton call include all arguments. <br>
+		Run this one line batch file over RunasRob.<br>
+		</li>
+		<li>
+		Errors Codes.<br>
+		Most errors are system errors which are returned from runasrob to user.<br>
+		This system error codes are explained by Microsoft on<br>
+		https://msdn.microsoft.com/en-us/library/ms681381.aspx
+		</li>
+		</ol>
+
+		
+	<hr>
+
+	<H3>Contact:</H3>
+	<p>
+	For any suggestions, errors, questions, specific requirements or adjustments please contact:<br>
+	 <a href="mailto:runas@robotronic.de">runas@robotronic.de</a><br>
+	</p>
+
+	<hr>
+
+	<H3>Licence:</H3>
+	<p>
+	RunasRob is only free for private use.<br>
+	For companies and other organisations we deliver a licensed version, registered to the organisation name.<br>
+	 <a href="https://robotronic.de/orderEnForm.php">Order RunasRob &gt;&gt;&gt;</a><br>
+	 <a href="https://robotronic.de/runasrob/runasroben.zip">Download RunasRob &gt;&gt;&gt;</a><br>
+	</p>
+	
+	<hr>
+	<p>
+	<i>	 
+	<meta itemprop="datePublished" content="2019-10-13">Date: 2019-10-13
+	<br>
+	<a href="https://runasrob.com/privacystatementen.html" title="Data protection">Data protection</a><br>
+	<a href="https://runasrob.com/imprinten.html" title="Imprint">Imprint</a>
+	</i>
+	</p>
+	
+	</div>
+	</div>
+	</body>
+</html>

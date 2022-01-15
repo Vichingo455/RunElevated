@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+		<meta charset="utf-8">
+		<title>Run as Service startet Programme versteckt im Hintergrund</title>
+		<link rel="amphtml" href="https://robotronic.de/amp/runasservicede.html">
+		<link rel="alternate" href="https://robotronic.de/runasserviceen.html" hreflang="x-default"/>
+		<link rel="alternate" href="https://robotronic.de/runasservicede.html" hreflang="de"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes" />
+		<meta name="DESCRIPTION" content="Starte Anwendung als Dienst nach dem Booten, bevor ein Benutzer sich anmeldet, unter dem Systemkonto mit den höchsten Systemrechten">
+		<meta name="KEYWORDS"  content="RunAsRob">
+		<meta name="ROBOTS"  content="INDEX, FOLLOW"> 
+        <meta name="author" content="Oliver Hessing" />
+
+        <!-- add styles -->
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+    </head>
+	<body>
+	<input type="checkbox" id="responsive-nav">
+	<label for="responsive-nav" class="responsive-nav-label"><img alt="Navigation" src="images/hamburger.png"> Navigation robotronic.de</label>	
+
+	<nav>
+	  <ul>
+		<li><a href="https://robotronic.de/contactde.html" title="Kontakt">Kontakt</a></li>
+		<li class="submenu">
+		<a href="#" title="RunAsRob">RunAsRob</a>
+			<ul>
+				<li><a href="runasrobde.html" title="RunAsRob overview">RunAsRob Übersicht</a></li>
+				<li><a href="runasadminde.html" title="Run as admin">Run as admin</a></li>
+				<li><a href="runasservicede.html" title="Run as service">Run as service</a></li>
+				<li><a href="runasdifferentuserde.html" title="Run as another user">Run as another user</a></li>
+				<li><a href="runasrobdetailsde.html" title="Details and Unterschiede">Details and Unterschiede</a></li>
+			</ul>
+		</li>
+		<li class="submenu">
+		<a href="#" title="RunAsSpc">RunAsSpc</a>
+			<ul>
+				<li><a href="runasspc.html" title="RunAsSpc overview">RunAsSpc Übersicht</a></li>
+				<li><a href="anleitung.html" title="Details und Beispiele">Details und Beispiele</a></li>
+			</ul>
+		</li>
+		<li><a href="elevatede.html" title="RunElevated">RunElevated</a></li>
+		<li><a href="https://robotronic.de/agb.html" title="AGB">AGB</a></li>
+		<li><a href="https://robotronic.de/orderDeForm.php" title="Bestellung">Bestellung</a></li>
+	  </ul>
+	</nav>
+	
+	<div class="pagecontent">
+	<p>
+	<a href="runasserviceen.html"><img alt="Run as service English" src="images/flagge_grossbritannien.gif"></a>
+	<a href="runasservicede.html"><img alt="Run as service German" src="images/flagge_deutschland.gif"></a>	
+	RunAsRob run as service
+	</p>
+	<div itemscope itemtype="http://schema.org/CreativeWork">
+	
+	<H1 itemprop="name">
+	Run as Service startet Programme versteckt im Hintergrund.
+	</H1>
+
+	<H2 itemprop="description">
+	Starte Anwendung als Dienst nach dem Booten, bevor ein Benutzer sich anmeldet, unter dem Systemkonto mit den höchsten Systemrechten.
+	</H2>
+
+	<div itemprop="disambiguatingDescription">
+	Hilfreich für Hintergrundaufgaben wie Monitoring, Kopieraktionen oder Prüfroutinen auf einem Computer. 
+	Nützlich wenn die Anwendung mit höchsten Rechten starten soll und dabei keine Benutzeraktion erforderlich ist.
+	Weil das Programm als Windows Dienst im unsichtbar im Hintergrund läuft, muss das entsprechende Programm seine Arbeit erledigen ohne irgendeine Benutzereingabe. 	
+	</div>
+	
+	<p>
+	RunAsService von RunAsRob ist ein kleines Tool um ein Programm oder ein Script, wie eine Batchdatei, als Windows Dienst laufen zu lassen.<br>
+	Die Methode ist einfach zu verstehen.<br>
+	Nachdem der Dienst von RunAsRob über die Grafische Benutzerschnittstelle RunAsService.exe installiert wurde, können sie die Anwendung oder das Script hinzufügen, welches sie als Windows Dienst starten wollen.<br>
+	Beim nächsten Booten des Computers, startet der Dienst von RunAsRob und liest in seinem Registry Pfad, welche Anwendungen von RunAsService gesetzt wurden und führt jedes einzelne Programm oder Script als Dienst unter dem Systemkonto aus.
+	</p>
+	
+	<img itemprop="image" src="images/screenshots/ScreenshotRunAsService.jpg" alt="RunAsService Screenshot UserInterface"> 
+		
+	<hr>
+	 
+	 <H3>Schnellanleitung:</H3>
+	 
+	 <ol>
+		 <li>Starten Sie RunAsService.exe als lokaler Administrator.
+		 </li>
+		 <li>
+		 Drücken Sie den Button &gt;&gt; Install RunAsRob &lt;&lt;.
+		 </li>
+		 <li>
+		 Wählen Sie über &gt;&gt;  Add application &lt;&lt; die Anwendung aus, welche als Dienst laufen soll.
+		 </li>
+		 <li>
+		 Fertig.
+		 </li>
+		 <li>
+		 Nach einem Neustart des Computers (oder des Dienstes RunasRob) startet die Anwendung als Dienst mit Systemrechten.
+		</li>
+		 <li> 
+		 <a href="https://runasrob.com/RunAsRobPermanentAsService.html">Videobeispiel</a>	 
+		 </li>
+	 </ol>
+
+	<hr>
+	 
+	<H3>Kontakt:</H3>
+
+	<p>
+	Für Verbesserungsvorschläge, Fragen, spezielle Anforderungen oder Anpassungen schreiben sie uns.<br>
+	 <a href="mailto:runas@robotronic.de">runas@robotronic.de</a>
+	 </p>
+	 
+	<hr>
+	 
+	 <H3>Lizenz:</H3>
+	 
+	 <p>
+	RunasRob ist nur für die private Verwendung frei.<br> 
+	Für Unternehmen und andere Organisationen gibt es auf den Organisationsnamen lizenzierte Versionen.<br>
+	 <a href="https://robotronic.de/orderDeForm.php">Bestellung RunasRob &gt;&gt;&gt;</a><br>
+	 <a href="https://robotronic.de/runasrob/runasrobde.zip">Download RunasRob &gt;&gt;&gt;</a><br>
+	</p>
+	
+	<hr>
+	<p>
+	<i>	 
+	<meta itemprop="datePublished" content="2019-10-13">Date: 2019-10-13
+	<br>
+	<a href="https://runasrob.com/privacystatementde.html" title="Datenschutz">Datenschutz</a><br>
+	<a href="https://runasrob.com/imprinten.html" title="Impressum">Impressum </a>
+	</i>
+	</p>
+	
+	</div>	
+	</div>
+	</body>
+</html>

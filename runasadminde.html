@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+		<meta charset="utf-8">
+		<title>Starte Programme als Administrator oder mit dem Systemkonto unter Standardbenutzer</title>
+		<link rel="amphtml" href="https://robotronic.de/amp/runasadminde.html">
+		<link rel="alternate" href="https://robotronic.de/runasadminen.html" hreflang="x-default"/>
+		<link rel="alternate" href="https://robotronic.de/runasadminde.html" hreflang="de"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes" />
+		<meta name="DESCRIPTION" content="Starte Software als Admin oder Systemuser von einem Standard Benutzerkonto aus. Konfiguriere Programme und Ordner, deren Inhalte mit Administrator - oder Systemrechte von einem eingeschränkten Benutzer gestartet werden dürfen.">
+		<meta name="KEYWORDS"  content="Ausführen als Administrator, starten mit Systemkonto">
+		<meta name="ROBOTS"  content="INDEX, FOLLOW">    
+        <meta name="author" content="Oliver Hessing" />
+
+        <!-- add styles -->
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+    </head>
+	<body>
+
+	<input type="checkbox" id="responsive-nav">
+	<label for="responsive-nav" class="responsive-nav-label"><img alt="Navigation" src="images/hamburger.png"> Navigation robotronic.de</label>	
+
+	<nav>
+	  <ul>
+		<li><a href="https://robotronic.de/contactde.html" title="Kontakt">Kontakt</a></li>
+		<li class="submenu">
+		<a href="#" title="RunAsRob">RunAsRob</a>
+			<ul>
+				<li><a href="runasrobde.html" title="RunAsRob overview">RunAsRob Übersicht</a></li>
+				<li><a href="runasadminde.html" title="Run as admin">Run as admin</a></li>
+				<li><a href="runasservicede.html" title="Run as service">Run as service</a></li>
+				<li><a href="runasdifferentuserde.html" title="Run as another user">Run as another user</a></li>
+				<li><a href="runasrobdetailsde.html" title="Details and Unterschiede">Details and Unterschiede</a></li>
+			</ul>
+		</li>
+		<li class="submenu">
+		<a href="#" title="RunAsSpc">RunAsSpc</a>
+			<ul>
+				<li><a href="runasspc.html" title="RunAsSpc overview">RunAsSpc Übersicht</a></li>
+				<li><a href="anleitung.html" title="Details und Beispiele">Details und Beispiele</a></li>
+			</ul>
+		</li>
+		<li><a href="elevatede.html" title="RunElevated">RunElevated</a></li>
+		<li><a href="https://robotronic.de/agb.html" title="AGB">AGB</a></li>
+		<li><a href="https://robotronic.de/orderDeForm.php" title="Bestellung">Bestellung</a></li>
+	  </ul>
+	</nav>
+	
+	<div class="pagecontent">
+	<p>
+	<a href="runasadminen.html"><img alt="Run as administrator English" src="images/flagge_grossbritannien.gif"></a>
+	<a href="runasadminde.html"><img alt="Runas admin German" src="images/flagge_deutschland.gif"></a>
+	RunAsRob run as admin
+	</p>
+	<div itemscope itemtype="http://schema.org/CreativeWork">
+
+	<H1 itemprop="name">
+	Starte Programme als Administrator oder mit dem Systemkonto unter Standardbenutzer
+	</H1>
+
+	<H2 itemprop="description">
+	Starte Software als Admin oder Systemuser von einem Standard Benutzerkonto aus. <br>
+	Konfiguriere Programme und Ordner, deren Inhalte mit Administrator - oder Systemrechte von einem eingeschränkten Benutzer gestartet werden dürfen.
+	</H2>
+	
+	<div itemprop="disambiguatingDescription">
+	 <ul>
+		 <li>
+		 Verteile Software oder Updates durch einfaches Kopieren der setup.exe in ein, mit Leserechte für Benutzer, bereitgestelltes Verzeichnis,<br> 
+		 aus dem ein eingeschränkter Benutzer dann die darin liegende Software selbst installieren kann, wenn dieses Verzeichnis in RunAsAdmin autorisiert ist.
+		 </li>
+		 <li>
+		 Delegiere administrative Aufgaben an Standardbenutzer oder anderen spezielle Benutzergruppen, <br>
+		 durch die Autorisierung der Aufgabe in RunAsAdmin, kombiniert mit Verzeichnisrechte für diese Gruppe. 
+		</li>
+		 <li>		 
+		Ermögliche einem Standardbenutzer ein Programm zu starten, das Administratorrechte benötigt.
+		 </li>
+	 </ul>
+	</div>
+	
+	 <p>
+	Wenn sie die einfache Arbeitsweise von RunAsAdmin verstehen, <br>
+	können sie dieses Werkzeug effizient für unterschiedliche Ziele einsetzen,<br>
+	bei einer einzelnen Workstation bis hin in einer großen Domain Umgebung.
+	</p>
+
+	<p>
+	RunAsAdmin.exe ist die grafische Benutzerschnittstelle, welche den Dienst RunAsRob installiert und die erlaubten Verzeichnisse in den Registrypfad von RunAsRob einträgt.<br>
+	Wenn ein eingeschränkter Benutzer ein Programm über eine von RunAsAdmin erzeugte Verknüpfung startet oder per Drag and Drop auf RunAsRob.exe zieht,<br>
+	dann vergleicht der Dienst von RunAsRob in seinen Registryeinträgen, ob diese Anwendung erlaubt ist.<br>
+	Wenn sie erlaubt ist, dann startet der Dienst von RunAsRob dieses Programm unter dem system account oder als Administrator, je nachdem welche Logon Option in RunAsAdmin gesetzt wurde.<br>
+	Standard Zugriffseinstellungen bei Microsoft Systemen verhindern das Manipulieren von Registryeinträge oder Dateien im standard Programmverzeichnis durch Standardbenutzer.<br>
+	In Verbindung mit Verzeichnisrechte, OUs oder Gruppenrichtlinien kann RunAsAdmin zu einem vielseitigem Werkzeug werden.<br>
+	</p>
+	
+	<p>
+	<img  itemprop="image" alt="RunAsAdmin configuration Window" src="images/screenshots/ScreenshotRunasAdmin.jpg"> 
+	</p>
+	
+	<hr>
+
+	 <H3><a id="QuickstartguideRunasAdmin:"></a>Schnellanleitung run as administrator mit RunAsAdmin</H3>
+	 
+	<p>
+	Starte ein Programm als Administrator mit Systemrechte von einem Standardbenutzer aus.
+	</p>
+	 <ol>
+		 <li>
+		 Entpacken Sie RunasRob.zip, starten Sie RunAsAdmin.exe und klicken Sie &gt;&gt; install RunasRob &lt;&lt;
+		</li>
+		 <li>
+		 Wählen Sie über &gt;&gt; Add application &lt;&lt; ein Programm aus, welches Sie mit Systemrechten starten wollen.
+		</li>
+		 <li>
+		 Markieren Sie die Anwendung in der Listbox von RunasAdmin und erstellen Sie eine Verknüpfung durch &gt;&gt; Create shortcut &lt;&lt;
+		</li>
+		 <li>
+		Über diesen Shortcut kann der eingeschränkte Benutzer nun das gewählte Programm mit Systemrechte zu starten.
+		</li>
+		 <li>
+		Bei Bedarf können Sie den Zugriff auf eine bestimmte Gruppe Benutzer einschränken indem Sie die Ordnerrechte des Pfades setzen.
+		</li>
+		 <li>
+		 Bei einer Netzwerk Freigabe muss das Computerkonto NTFS Leserechte auf die Freigabe haben. In einer Domain ist es die Gruppe Domain Computers.
+		</li>
+		 <li>
+		 <a href="https://runasrob.com/RunAsRobRunAsAdminAsSystem.html">Videobeispiel</a>
+		 </li>
+	 </ol>
+	 
+	<p>
+	Starte ein Programm als Administrator von einem Standardbenutzer aus mit dem Profil des Standardbenutzer. 
+	</p>
+
+	 <ol>
+		 <li>
+		 Starten Sie RunAsAdmin.exe aus dem RunasRob Verzeichnis.
+		</li>
+		 <li>
+		 Klicken Sie &gt;&gt; Install RunasRob &lt;&lt; um den RunasRob Dienst zu installieren.
+		</li>
+		 <li>
+		 Setzen sie die Option &gt;&gt; Logon as &lt;&lt; auf administrator.
+		 </li>
+		 <li>
+		 Drücken Sie &gt;&gt; Add application &lt;&lt; und wählen Sie das Programm welches autorisiert werden soll.
+		</li>
+		 <li>
+		 Wählen Sie das Program inder Listbox aus und klicken Sie &gt;&gt; Create shortcut &lt;&lt;
+		</li>
+		 <li>
+		 Über diesen Shortcut kann ein Standard Benutzer Account das Programm als Administrator ausführen .
+		</li>
+		 <li>
+		 Bevor die Anwendung startet wird der Benutzer nach seinen Anmeldeinformationen gefragt<br> 
+		 damit diese Anwendung unter seinem eigenen Accout als Mitglied der lokalen Administratoren startet.
+		 </li>
+		 <li>
+		 <a href="https://runasrob.com/RunAsRobRunAsAdminWithEnvironment.html">Videobeispiel</a>
+		 </li>
+	 </ol>
+	 
+	<hr>
+	 
+	<H3>
+	<a id="WithNTFSReadpersmissions"></a>Über Verzeichnisrechte lesen, können sie bestimmte Benutzer und Computer in einer Domain berechtigen, <br>
+	welche den erlaubten Order in RunAsAdmin für RunAsRob.exe nutzen dürfen.
+	</H3>
+
+	<p>
+	Bitte beachten sie folgende Netzwerkregeln für das Verständnis <br> 
+	- der lokale Systemkonto ist in der Domain das Active Directory Computer Objekt mit dem Namen des Rechners.
+	- dass Netzwerk Zugriffsrechte für die Freigabe und NTFS Ordner Rechte untereinander unabhängig sind. Sie sollten deshalb immer beide Rechtesysteme eines freigegebenen Ordners configurieren und verwalten.
+	</p>
+		
+	<p>
+	In folgendem Screenshot hab ich drei Verzeichnisse software, updates und taxlaw auf einem Netzwerkserver freigegeben <br>
+	und entsprechende Verzeichnisrechte auf lesend gesetzt für die Gruppe &gt;Region admin&lt;, &gt;Users&lt;, &gt;Accountants&lt; <br>
+	und allen Computer Clients über die Gruppe &gt;Domain computers&lt;. <br>
+	Bei der Freigabe taxlaw beschränke ich den erlaubten Aufruf auf die Computergruppe &gt;Accountants	Computers&lt;<br>
+	Am Ende hab ich auf den Clients in RunAsAdmin diese Netzwerkpfade autorisiert.<br>
+	Nun können Benutzer der jeweiligen Gruppe auf ihren Clients Programme aus diesen Verzeichnissen über RunAsRob mit System oder Administatorrechte starten.
+	</p>
+	
+	<p>
+	Netzwerk Freigaberechte auf dem Server, in diesem Screenshot als Beispiel für den Ordner taxlaw <br>
+	<img style="width: 600px; height: 600px;" alt="NetworkSharePermissions.jpg" title="NetworkSharePermissions.jpg" src="images/screenshots/NetworkSharePermissions.jpg"><br>
+	</p>
+	
+	<p>
+	Verzeichnisrechte auf dem Server für die freigegebenen Ordner software, updates und taxlaw <br>
+	<img style="width: 600px; height: 600px;" alt="NetworkFolderPermissions" title="NetworkFolderPermissions" src="images/screenshots/NetworkFolderPermissions.jpg"><br>
+	</p>
+	
+	<p>
+	Zum Schluss, autorisiere Netzwerkfreigaben am Clientcomputer in RunAsAdmin<br>
+	<img style="width: 600px; height: 400px;" alt="NetworkRunAsRobPermission.jpg" title="NetworkRunAsRobPermission.jpg" src="images/screenshots/NetworkRunAsRobPermission.jpg"><br>
+	</p>
+	
+	<hr>
+	 
+	<H3><a id="StoredSettings"></a>Gespeicherte Konfiguration:</H3>
+
+	<p>
+	Hier sehen sie die Registry Werte von RunAsRob mit AllowedPath und LogonFlag, welche durch RunAsAdmin gesetzt werden und von RunAsRob überprüft wird, sobald eine Anwendung über RunAsRob starten soll.<br> 
+	Diese Werte können auch manuell oder über Gruppenrichtlinien gesetzt werden.<br>
+	<img style="width: 600px; height: 200px;" alt="Registry RunasRob" title="Registry RunasRob" src="images/screenshots/RunasRobRegistryAllowedPath.jpg"><br>
+	 </p>
+
+	<hr>
+	 
+	 <H3>
+	 <a id="Bygrouppolicy"></a>Mit Gruppenrichtlinien können sie die erlaubten Programme von RunAsAdmin zentral verwalten.
+	 </H3>
+
+	<p>
+	Sie können diese RunAsRob Gruppenrichtlinien Dateien admx und adml unter folgendem Link herunterladen <a href="https://robotronic.de/runasrob/RunAsRobPolicy.zip">RunAsRobPolicy.zip</a><br>
+	Im Screenshot sehen sie eine OU Finance, welcher ich die PolicyRunAsRob zuwies und die Verzeichnisse &gt;&gt; \\appsrv\software\;\\appsrv\updates\;\\appsrv\taxlaw\ &lt;&lt; auf den Computern dierser OU erlaubt habe. <br>
+	Welche Benutzer oder Gruppe dieser Computer Anwendung daraus starten dürfen, löse ich über Verzeichnisrechte wie oben beschrieben.<br>
+	 <img style="width: 1200px; height: 800px;" alt="RunasRobGroupPolicyAllowedPath" title="RunasRobGroupPolicyAllowedPath" src="images/screenshots/RunasRobGroupPolicyAllowedPath.jpg"><br>
+	</p>
+	 
+	<hr>
+	 
+	<H3>Beispiel in einer Domain</H3> 
+	 
+	<p>
+	Konfiguriere einen Ordnerpfad, aus welchem Programme mit Administratorrechte gestartet werden können von einem Standardbenutzer.
+	Über diesen Weg können Sie zentral in einer Domain einen Ordner bereitstellen für Anwendungen, Scripte, Updates, Patches,...,<br> 
+	die dann der eingeschränkte Benutzer selber installieren kann, sobald sie in diesem autorisierten Ordner liegen.<br>
+	Der Domain Administrator muss dann nur noch bei Bedarf entsprechendes Programm in diesen Ordner kopieren und dem Anwender bescheid geben.<br>
+	Sie können natürlich auch einen lokalen Programmpfad angeben, dessen Inhalt vom Standardbenutzer unter lokalen Administratorrechten gestartet werden kann.<br>
+	</p> 
+
+	<p>
+	Beschreibung:
+	</p>
+
+	<ol>
+	 <li>
+		Verwenden Sie einen lokalen Pfad oder geben Sie einen Ordner auf einem Server frei mit Leserechte für den Anwender und bei einer Serverfreigabe auch für das Computerkonto.<br>
+		Sie können auch Ihre eigene Gruppe von Computer und/oder Benutzern anlegen, die für diesen Ordner berechtigt sind.<br>
+		Über diesen Weg können Sie differenzierte Ausüfhrungsrechte einzelner Benutzer, Computer oder Gruppen festlegen.<br>
+	 <img style="width: 600px; height: 383px;" alt="Server Share Permission" title="Server Share Permission" src="images/screenshots/ServerSharePermission.jpg"><br>
+	 </li>
+		 <li>
+		 Installieren und konfigurieren sie am Client die autorisierten Ordner oder Programme in der Registry <br>
+		durch a) RunasAdmin.exe, b) zentrale Gruppenrichtlinien oder c)Kommandozeile<br>
+		 <br>
+		a) RunasAdmin<br>
+		 <img alt="Screenshot RunasAdmin" src="images/screenshots/ScreenshotRunasAdmin.jpg"><br>
+		 <br>
+		b) Zentrale Gruppenrichtlinien<br>
+		 <img style="width: 862px; height: 419px;" alt="GroupPolicyAllowedPath" src="images/screenshots/GroupPolicyAllowedPath.jpg"><br>
+		 <br>
+		c) Kommandozeile<br>
+		installieren Sie RunasRob mit der Option /install und /allowedpath, gefolgt von den Ordnern und Programmen welche Sie erlauben möchten. <br>
+		Bei mehreren Ordnern oder Programmen trennen Sie die Pfade mit einem Strichpunkt.<br>
+		Im Beispiel unten erlauben Sie Programme im lokalen Pfad taxlaw, die Anwendung regedt32.exe und Programme im Serverpfad share1<br>
+		&gt;&gt; runasrob.exe /install /allowedpath:C:\Program Files (x86)\taxlaw\;C:\windows\system32\regedt32.exe;\\server\share1\; &lt;&lt;<br>
+		 <img style="width: 877px; height: 114px;" alt="Runas Rob Install AllowedPath" title="Runas Rob Install AllowedPath" src="images/screenshots/RunasRobInstallAllowedPathCMD.jpg"><br>
+		 <br>
+		Eine weiterer optionaler Parameter ist /asservice (default) oder /asadmin<br>
+		/asservice -&gt; Die freigegebene Anwendung startet unter dem system account mit erhöhten Administratorrechten.<br>
+		/asadmin -&gt; Nach Eingabe der Anmeldedaten wird der Benutzer zum Mitiglied der lokalen Administratoren für diese Anwendung welche dann.unter seinem eigenen Account startet.<br>
+		&gt;&gt; runasrob.exe /install /allowedpath:C:\Program Files (x86)\taxlaw\;C:\windows\system32\regedt32.exe;\\server\share1\; /asadmin &lt;&lt;<br>
+		 <img style="width: 877px; height: 114px;" alt="allowed folder with option asadmin" title="allowed folder with option asadmin" src="images/screenshots/RunasRobInstallAllowedPathCMDAsAdmin.jpg"><br>
+		 <br>
+		 </li>
+		 <li>
+		Konfiguration ist bereits fertig. Sie können im Registrypfad von RunasRob den Key mit den Pfaden sehen. <br>
+		Diesen Key können Sie bei Bedarf auch manuell oder über zentrale Gruppenrichtlinien anpassen.<br>
+		Auf 64 Bit Computer &gt;&gt; HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\RunasRob<br>
+		Auf 32 Bit Computer &gt;&gt; HKEY_LOCAL_MACHINE\SOFTWARE\RunasRob<br>
+		<img style="width: 947px; height: 231px;" alt="RunasRob Registry Screenshot of Allowed Path" title="RunasRob Registry Screenshot of Allowed Path" src="images/screenshots/RunasRobRegistryAllowedPath.jpg"><br>
+		<br>
+		</li>
+		<li>
+	 Nun kann ein Standardbenutzer Anwendungen aus diesen Pfaden mit Administratorrechte starten indem er <br>
+	die Anwendung per Drag and Drop über RunasRob zieht<br>
+	oder Sie erstellen ihm eine Verknüpfung oder Batchdatei wie <br>
+	&gt;&gt; runasrob.exe \\server\share1\IhreAnwendung.exe &lt;&lt;<br> 
+	&gt;&gt; runasrob.exe c:\windows\system32\regedt32.exe &lt;&lt;<br>
+	&gt;&gt; runasrob.exe c:\Program Files (x86)\taxlaw\update.exe &lt;&lt;<br>
+	 <img style="width: 836px; height: 533px;" alt="Call an Application from an allowed path" title="Call an Application from an allowed path" src="images/screenshots/CallApplicationFromAnAllowedPath.jpg"><br>
+	 </li>
+	 </ol>
+	 
+	<hr>
+	 
+	<H3>Weitere Videobeispiele:</H3>
+
+	<p>
+	 <a href="https://robotronic.de/allowedFolderLocalAsSystem.html">Im Videobeispiel 1</a> wird eingeschränkten Benutzern erlaubt über RunAsRob Programme des Verzeichnisses system32 mit Systemrechten zu starten. <br>
+	 <a href="https://robotronic.de/allowedFolderShareAsSystem.html">Im Videobeispiel 2</a> wird eingeschränkten Benutzern ermöglicht über RunasRob Programme aus einer Netzwerkfreigabe selbst zu installieren.<br>
+	 <a href="https://robotronic.de/DomainShareGroupOfComputersGroupOfUsers.html">Im Videobeispiel 3</a> sehen sie, wie ein bestimmter Kreis von Benutzer für bestimmte Computer berechtigt werden kann <br>
+	 Software über RunasRob mit Administratorrechte zu starten die einem definierten Pfad liegt. <br>
+	</p>
+
+	<hr>
+	 
+	 <H3> Kontakt:</H3>
+	 
+	<p>
+	Für Verbesserungsvorschläge, Fragen, spezielle Anforderungen oder Anpassungen schreiben sie uns.<br>
+	 <a href="mailto:runas@robotronic.de">runas@robotronic.de</a><br>
+	</p>
+
+	<hr>
+	 
+	<H3>Lizenz:</H3>
+
+	<p>
+	RunasRob ist nur für die private Verwendung frei.<br>
+	Für Unternehmen und andere Organisationen gibt es auf den Organisationsnamen lizenzierte Versionen.<br>
+	 <a href="https://robotronic.de/orderDeForm.php">Bestellung RunasRob &gt;&gt;&gt;</a><br>
+	 <a href="https://robotronic.de/runasrob/runasrobde.zip">Download RunasRob &gt;&gt;&gt;</a><br>
+	</p>
+	
+	<hr>
+	<p>
+	<i>	 
+	<meta itemprop="datePublished" content="2019-10-13">Date: 2019-10-13
+	<br>
+	<a href="https://runasrob.com/privacystatementde.html" title="Datenschutz">Datenschutz</a><br>
+	<a href="https://runasrob.com/imprinten.html" title="Impressum">Impressum </a>
+	</i>
+	</p>
+	
+	</div>
+	</div>
+	</body>
+</html>

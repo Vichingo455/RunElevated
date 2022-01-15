@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Run as different user start an application with other credentials</title>
+		<link rel="amphtml" href="https://robotronic.de/amp/runasdifferentuseren.html">
+		<link rel="alternate" href="https://robotronic.de/runasdifferentuseren.html" hreflang="x-default"/>
+		<link rel="alternate" href="https://robotronic.de/runasdifferentuserde.html" hreflang="de"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes" />
+		<meta name="DESCRIPTION" content="To run application as different user from the current logged on user in Windows, the login credentials are read from an encrypted file">
+		<meta name="KEYWORDS" content="Run as different user">
+		<meta name="ROBOTS" content="INDEX, FOLLOW"> 
+		<meta name="author" content="Oliver Hessing" />
+
+		<!-- add styles -->
+		<link href="css/main.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+
+	<input type="checkbox" id="responsive-nav">
+	<label for="responsive-nav" class="responsive-nav-label"><img alt="Navigation" src="images/hamburger.png"> Navigation robotronic.de</label>	
+
+	<nav>
+	  <ul>
+		<li><a href="https://robotronic.de/contacten.html" title="Contact">Contact</a></li>
+		<li class="submenu">
+		<a href="#" title="RunAsRob">RunAsRob</a>
+			<ul>
+				<li><a href="runasroben.html" title="RunAsRob overview">RunAsRob overview</a></li>
+				<li><a href="runasadminen.html" title="Run as admin">Run as admin</a></li>
+				<li><a href="runasserviceen.html" title="Run as service">Run as service</a></li>
+				<li><a href="runasdifferentuseren.html" title="Run as another user">Run as another user</a></li>
+				<li><a href="runasrobdetailsen.html" title="Details and differences">Details and differences</a></li>
+			</ul>
+		</li>
+		<li class="submenu">
+		<a href="#" title="RunAsSpc">RunAsSpc</a>
+			<ul>
+				<li><a href="runasspcen.html" title="RunAsSpc overview">RunAsSpc overview</a></li>
+				<li><a href="guidance.html" title="Details and examples">Details and examples</a></li>
+			</ul>
+		</li>
+		<li><a href="elevateen.html" title="RunElevated">RunElevated</a></li>
+		<li><a href="https://robotronic.de/eula.html" title="EULA">EULA</a></li>
+		<li><a href="https://robotronic.de/orderEnForm.php" title="Order">Order</a></li>  	
+	  </ul>
+	</nav>
+	
+	<div class="pagecontent">
+	<p>
+	<a href="runasdifferentuseren.html"><img alt="Run as different user English" src="images/flagge_grossbritannien.gif"></a>
+	<a href="runasdifferentuserde.html"><img alt="Run as different user German" src="images/flagge_deutschland.gif"></a>	
+	RunAsRob run as another user
+	</p>
+	<div itemscope itemtype="http://schema.org/CreativeWork">
+
+	<H1 itemprop="name">
+	Run as different user start an application with other credentials
+	</H1>
+
+	<H2 itemprop="description">
+	To run application as different user from the current logged on user in Windows, the login credentials are read from an encrypted file. 
+	</H2>
+	
+	<div itemprop="disambiguatingDescription">
+	Run an application as administrator or any other account without installing the service of RunAsRob.<br>
+	Delegate particular administrative tasks to limited users, by send them an encrypted file, in which the program for this job is authorized.<br>
+	By this way, you can also distribute software by providing an encrypted file, in which the path to the setup.exe and credentials of an administrator account are stored, to start the installation as administrator.<br>
+	With run as different user of RunAsRob, you can substitute a colleague by running the according program with his login credentials from an encrypted file.<br>
+	If you must work under an administrator account, you can run specific software or an internet browser with limited rights, to minimize the security risk.<br>
+	As administrator you can easy test and verify software, if it is running with standard user privileges, without logout and login procedure.  <br>	
+	</div>
+	
+	<p>
+	 <img itemprop="image" style="width: 1020px; height: 765px;" alt="RunasRob ToolTip" src="images/screenshots/RunasRobToolTip.jpg"><br>
+	</p>
+	
+	 <p>
+	Path\Application.exe:<br>
+	This field shows the path of the application in the encrypted file which can run over Runas Rob. Here you can change, select or enter the full path of your application.
+	</p>
+	<p>
+	Authentication:<br>
+	Credentials of the administrator who is written in the encrypted file to start the application over this authentication.
+	</p>
+	<p>
+	Crypt file:<br>
+	Path of the encrypted file that saved the information from this configuration window<br>
+	With the crypt file buttons you can open, save or test an open encrypted file. <br>
+	You must save your changes over the &gt;&gt; save crypt file &lt;&lt; button before you can test it.
+	</p>
+	<p>
+	Program options:<br>
+	On this field you can input arguments or options your application require.
+	</p>
+	<p>
+	Start in:<br>
+	Directory where your application should executed. 
+	</p>
+	<p>
+	Logon as: 
+	</p>
+		<ul>
+		 <li>
+			another user &gt;&gt; application run under the authentication in the encrypted file.
+		 </li>
+		 <li>
+			netonly &gt;&gt; application use logon credentials only for remote connections.
+		 </li>
+		 <li>
+			*service &gt;&gt; application start with system rights and elevated privilegs under the local system account and bypass the UAC Dialog. 
+		 </li>
+		 <li>
+			*administrator &gt;&gt; current logged on user will login as a member of the local group administrators for the autorized application.<br>
+			By this option the own profile and environment of the current user is used. Therefore the user have to input his own credentials to launch the allowed application as a member of the local administrator group. <br>
+		</li>
+		</ul> 
+
+	<p style='font-style:italic; font-size:smaller'>	
+		* The last two options require an installation of the service from RunasRob. You can do this over the Install Button or a call of RunasRob with option /install like &gt;&gt; runasrob.exe /install &lt;&lt; <br>
+	</p>
+	<br>
+	<p>
+	Program window:<br>
+	Set it visible to show the application for interacting with the user. <br>
+	Set the option Hide to launch the application in background.
+	</p>
+	 
+	<hr>
+	 
+	<H3><a id="quickguidancerunasrobencrypted"></a>Quick start guide RunasRob with an encrypted file:</H3>
+
+	<p>
+	Run application under a limited user with credentials of an administrator account without installing RunAsRob service.
+	</p>
+
+		 <ol>
+		 <li>
+		 Start RunasRob.exe and press enter to open the configuration window for encrypted files.
+		</li>
+		 <li>
+		 In the appeared window select the path\Application.exe you want to run over RunAsRob and
+		</li>
+		 <li>
+		 Enter the administrator authentication you want to use for it by fill out the authentication fields.
+		 </li>
+		 <li>
+		 Store your encrypted file over&gt;&gt; Save crypt file &lt;&lt;
+		 </li>
+		 <li>
+		 Check your generated crypt file over the button &gt;&gt;Test crypt file &lt;&lt; and your application should be start under the settings you entered in the configuration program.
+		 </li>
+		 <li>
+		 You are finished. Close this configuration window.
+		 </li>
+		 <li>
+		 Start &gt;&gt; yourCryptFile.xus &lt;&lt; by drag and drop over RunAsRob.exe or call your encrypted file over a shortcut, batchfile or similar with following command: <br> 
+		&gt;&gt; runasrob.exe /cryptfile:&rdquo;c:\yourpath\YourCryptFile.xus&rdquo; &lt;
+		</li>
+		 <li>
+		 <a href="https://runasrob.com/RunAsRobEncryptRunAsDifferentUser.html">Video example</a>
+		 </li>
+		 </ol>
+	 
+	<p>
+	Run application as administrator under a limited user account with his own environment. 
+	</p>
+
+		 <ol>
+		 <li>
+		 Start RunasRob.exe and press enter to open the configuration window for encrypted files. 
+		</li>
+		 <li>
+		 Press button &gt;&gt; install Service &lt;&lt; to install RunasRob Service on client
+		</li>
+		 <li>
+		 Select the Path\Application.exe you want to run over RunAsRob and
+		</li>
+		 <li>
+		 Enter local administrator credential into the authentication fields
+		</li>
+		 <li>
+		 Set the option field &gt;&gt; Logon as &lt;&lt; to administrator
+		</li>
+		 <li>
+		 Store your encrypted file over&gt;&gt; Save crypt file &lt;&lt;
+		</li>
+		 <li>
+		 Login as limited user to check the encrypted file.
+		 </li>
+		 <li>
+		 Start &gt;&gt; yourCryptFile.xus &lt;&lt; as limited user by drag and drop over RunAsRob.exe or call your encrypted file over a shortcut, batchfile or similar with following command: <br>
+		 &gt;&gt; runasrob.exe cryptfile:&rdquo;c:\yourpath\YourCryptFile.xus&rdquo; &lt;
+		 </li>
+		 <li>
+		 Now the user will be asked for his credentials to launch the applicaiton under his own account and profile as a member of the local administrator group.
+		</li>
+		 <li>
+		 <a href="https://robotronic.de/RunAsRobEncryptWithEnvironment.html">Video example</a>
+		</li>
+		 </ol>
+	 
+	<hr>
+
+	<H3>Contact:</H3>
+	<p>
+	For any suggestions, errors, questions, specific requirements or adjustments please contact:<br>
+	 <a href="mailto:runas@robotronic.de">runas@robotronic.de</a><br>
+	</p>
+
+	<hr>
+
+	<H3>Licence:</H3>
+	<p>
+	RunasRob is only free for private use.<br>
+	For companies and other organisations we deliver a licensed version, registered to the organisation name.<br>
+	 <a href="https://robotronic.de/orderEnForm.php">Order RunasRob &gt;&gt;&gt;</a><br>
+	 <a href="https://robotronic.de/runasrob/runasroben.zip">Download RunasRob &gt;&gt;&gt;</a><br>
+	</p>
+	
+	<hr>
+	<p>
+	<i>	 
+	<meta itemprop="datePublished" content="2019-10-13">Date: 2019-10-13
+	<br>
+	<a href="https://runasrob.com/privacystatementen.html" title="Data protection">Data protection</a><br>
+	<a href="https://runasrob.com/imprinten.html" title="Imprint">Imprint</a>
+	</i>
+	</p>
+	
+	</div>	
+	</div>
+	</body>
+</html>

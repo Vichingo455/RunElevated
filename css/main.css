@@ -1,0 +1,196 @@
+
+* {
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: Helvetica, Arial, Geneva, sans-serif;
+  /*font-family: font-family: Georgia, 'Times New Roman', serif;*/
+  box-sizing: border-box;
+}
+
+body {
+  background: #EEE;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+div.pagecontent{
+	margin: auto;
+	padding-left: 1em;
+    padding-right: 2em;	
+	/*width: 60em;*/
+	/*width: 600px;*/
+	max-width: 1200px;
+	background-color: #eee;
+	/*font-size: 15px;*/	
+	}
+
+/* hide the checkbox and the label */
+input#responsive-nav,
+label.responsive-nav-label {
+  display: none;
+}
+
+/* declarations for the not-responsove-menu */
+
+nav {
+  float: left;
+  width: 100%;
+  background: #000;
+  font-size: 15px;
+  margin-bottom: 1em;
+
+}
+
+nav ul {
+  margin: auto;
+  padding: 0;
+  max-width: 1200px;
+}
+
+nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li {
+  position: relative;
+  float: left;
+  list-style: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+nav ul li a {
+  padding: 20px;
+}
+
+nav ul > li.submenu > a:after {
+  position: relative;
+  float: right;
+  content: '';
+  margin-left: 10px;
+  margin-top: 5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid transparent;
+}
+
+nav ul ul li.submenu > a:after {
+  margin-left: auto;
+  margin-right: -10px;
+  border-left: 5px solid #fff;
+  border-right: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+nav ul li:hover {
+  background: #A4A4A4;
+}
+
+nav ul ul {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  background: #333;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul ul li {
+  float: none;
+  width: 200px;
+  border-bottom: 1px solid #555;
+}
+
+nav ul ul li a {
+  padding: 10px 20px;
+}
+
+nav ul ul li:last-child {
+  border-bottom: none;
+}
+
+nav ul li:hover > ul {
+  top: 100%;
+  left: 0;
+}
+
+nav ul ul li:hover > ul {
+  top: 0;
+  left: 200px;
+}
+
+/* Declarations for the responsive menu */
+
+@media screen and (max-width: 600px) {
+  
+* {
+  font-size: 15px;
+}
+  
+label.responsive-nav-label {
+	position: relative;
+  display: block;
+  padding: 10px;
+  background: #222;
+  cursor: pointer;
+  color: #fff;
+}
+  
+label.responsive-nav-label span {
+  margin-right: 10px;  
+}
+
+nav {
+  position: absolute;
+  top: -9999px;
+  padding: 10px;
+}
+
+input#responsive-nav[type=checkbox]:checked ~ nav {
+  position: relative;
+  top: 0;
+}
+
+nav a:after {
+  display: none;
+}
+
+nav li {
+  float: none !important;
+  width: 100% !important;
+  border-bottom: none !important; 
+}
+  
+nav li a {
+  margin-bottom: 5px !important;
+  padding: 5px 10px !important; 
+  background: #4a4a4a;
+}
+  
+nav ul li:hover {
+  background: none;
+}
+  
+nav ul li a:hover {
+  background: #A4A4A4;
+}
+  
+nav ul ul {
+  position: relative !important;
+  width: 100%;
+  left: 0 !important;
+  top: 0 !important;
+  background: none !important;
+  box-shadow: none;
+}
+  
+nav ul ul li {
+  padding-left: 20px;
+}
+
+}

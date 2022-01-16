@@ -1,5 +1,5 @@
 # RunElevated
-Utility to bypass User Account Control
+Utility to trigger UAC elevation
 
 ## Usage
 This application can be used for scrpts and application, like:
